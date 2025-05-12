@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Listeners Example</title>
+  <style>
+    #myImage {
+      width: 200px;
+      border: 5px solid gray;
+      transition: border-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button -->
+  <button id="myButton">Click Me</button>
+
+  <!-- Image -->
+  <br><br>
+  <img id="myImage" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Placeholder Image">
+
+  <script>
+    // Button click event
+    const button = document.getElementById('myButton');
+    button.addEventListener('click', () => {
+      console.log('Button clicked!');
+    });
+
+    // Image mouseover event
+    const image = document.getElementById('myImage');
+    image.addEventListener('mouseover', () => {
+      image.style.borderColor = 'blue';
+    });
+    image.addEventListener('mouseout', () => {
+      image.style.borderColor = 'gray';
+    });
+
+    // Key press event
+    document.addEventListener('keydown', (event) => {
+      console.log(`Key pressed: ${event.key}`);
+    });
+  </script>
+
+</body>
+</html>
