@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: Default   # or whatever your self-hosted agent pool is named
 
 steps:
 - script: echo "Hello from Azure Pipelines"
