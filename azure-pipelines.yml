@@ -13,12 +13,11 @@ pool:
 steps:
 - script: java -version
   displayName: 'Check Java version'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean install'
-    options: '-X -e'
-    mavenVersionOption: 'Default'
 
 - task: PublishTestResults@2
   inputs:
@@ -30,4 +29,3 @@ steps:
     PathtoPublish: 'target'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-
